@@ -16,6 +16,12 @@
 		padding-left: 40px;
 		border-left: 1px solid var(--border);
 	}
+
+	@media (prefers-color-scheme: dark) {
+		.about-wrapper {
+			border-left-color: transparent;
+		}
+	}
 	.about {
 		width: 190px;
 		display: flex;

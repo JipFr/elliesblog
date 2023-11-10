@@ -24,7 +24,7 @@
 			--bg-image: url("/background-dark.png");
 			--text: #767b9a;
 			--text-harsh: #717797;
-			--border: #7b82b4;
+			--border: #292d46;
 			--highlight: url("https://png.pngtree.com/thumb_back/fh260/background/20210126/pngtree-cartoon-five-pointed-star-solid-color-background-image_541007.jpg"),
 				#2626a2;
 		}

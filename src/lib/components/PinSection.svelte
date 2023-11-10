@@ -1,6 +1,9 @@
 <script lang="ts">
 	import { page as pageStore } from "$app/stores";
 	import Pinterest from "$lib/icons/Pinterest.svelte";
+	import Heading2 from "./util/Heading2.svelte";
+	import Paragraph from "./util/Paragraph.svelte";
+	import Section from "./util/Section.svelte";
 
 	let page: any;
 	pageStore.subscribe((l) => {
@@ -40,8 +43,6 @@
 			colsFilled += colsToFill;
 		}
 		if (colsToFill === 1) {
-			// We're at the end
-			// console.log(colsToFill, colsFilled);
 			const last = cols[cols.length - 1];
 			cols[cols.length - 1] = {
 				...last,
@@ -50,12 +51,12 @@
 			colsFilled++;
 		}
 	}
-	console.log(cols);
 </script>
 
-<section>
-	<h2>Ellie's pins</h2>
-	<p>I love to go on Pinterest and pin whatever I see fit!</p>
+<Section>
+	<Heading2>Ellie's pins</Heading2>
+	<Paragraph>I love to go on Pinterest and pin whatever I see fit!</Paragraph>
+
 	<div class="grid">
 		{#each cols as col}
 			<div
@@ -85,23 +86,9 @@
 			See all my pins
 		</a>
 	</div>
-</section>
+</Section>
 
 <style lang="scss">
-	section {
-		margin-top: 43px;
-	}
-	h2,
-	p {
-		margin: 0;
-	}
-	h2 {
-		font-size: 26px;
-		font-weight: 500;
-	}
-	p {
-		margin-top: 13px;
-	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(9, 1fr);
