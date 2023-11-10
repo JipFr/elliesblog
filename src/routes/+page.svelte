@@ -11,9 +11,6 @@
 
 <Cols>
 	<PeoplePicks />
-	<div style="display: flex; justify-content: end;">
-		<AboutEllie />
-	</div>
 </Cols>
 
 <Cols>

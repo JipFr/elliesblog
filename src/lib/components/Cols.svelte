@@ -5,7 +5,7 @@
 <style lang="scss">
 	.cols {
 		display: grid;
-		grid-template-columns: 1fr 280px;
+		grid-template-columns: 1fr;
 		grid-gap: 0;
 	}
 </style>

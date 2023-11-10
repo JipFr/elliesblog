@@ -4,8 +4,10 @@
 			<div class="img-wrapper">
 				<img src="/ellie.png" alt="Ellie" />
 			</div>
-			<h2>About Ellie</h2>
-			<p>Fake person, writer of words, lover of clothes.</p>
+			<div class="text-wrapper">
+				<h2>About Ellie</h2>
+				<p>Fake person, writer of words, lover of clothes.</p>
+			</div>
 		</div>
 	</div>
 </div>
@@ -13,23 +15,14 @@
 <style lang="scss">
 	.about-wrapper {
 		margin-top: 30px;
-		padding-left: 40px;
-		border-left: 1px solid var(--border);
-	}
-
-	@media (prefers-color-scheme: dark) {
-		.about-wrapper {
-			border-left-color: transparent;
-		}
 	}
 	.about {
-		width: 190px;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
+		flex-direction: row-reverse;
+		align-items: flex-end;
 	}
 	.img-wrapper {
-		width: 150px;
+		width: 100px;
 		background: var(--highlight);
 		padding-top: 20px;
 		border-radius: 20px 20px 0 0;
@@ -44,26 +37,31 @@
 		&::after {
 			content: "";
 			display: block;
-			width: 2rem;
-			height: 2rem;
+			width: 1.5rem;
+			height: 1.5rem;
 			background: url("/🌸.png");
+			background-size: cover;
 			position: absolute;
 			top: 22px;
-			right: 30px;
+			right: 20px;
 		}
+	}
+
+	.text-wrapper {
+		margin-bottom: 0.5rem;
 	}
 
 	h2,
 	p {
 		margin: 0;
-		text-align: center;
+		text-align: right;
+		margin-right: 1rem;
 	}
 	p {
-		font-size: 0.9rem;
 		margin-top: 10px;
 	}
 	h2 {
-		margin-top: 10px;
-		font-size: 1.1rem;
+		margin-top: 1.5rem;
+		font-size: 1.2rem;
 	}
 </style>
