@@ -15,6 +15,7 @@
 		--text: #634904;
 		--text-harsh: #000;
 		--border: #634904;
+		--highlight: #f7d26f;
 	}
 
 	@media (prefers-color-scheme: dark) {

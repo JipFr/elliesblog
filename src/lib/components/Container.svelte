@@ -4,7 +4,7 @@
 
 <style lang="scss">
 	.container {
-		max-width: 1034px;
+		max-width: calc(1034px + 4rem);
 		margin: 0 auto;
 		padding: 0 2rem;
 	}
