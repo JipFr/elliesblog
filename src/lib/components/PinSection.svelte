@@ -153,7 +153,7 @@
 	.hover-shift:hover img {
 		position: relative;
 		z-index: 100;
-		transform: translateX(10px) rotate3d(14, 27, 6, 45deg);
+		transform: rotateX(-8deg) rotateY(-18deg);
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 	}
 </style>
