@@ -24,10 +24,11 @@
 	}
 	.img-wrapper {
 		width: 150px;
-		background-color: var(--highlight);
+		background: var(--highlight);
 		padding-top: 20px;
 		border-radius: 20px 20px 0 0;
 		position: relative;
+		background-blend-mode: difference;
 
 		img {
 			width: 100%;
