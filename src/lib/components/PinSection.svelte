@@ -1,15 +1,5 @@
 <script lang="ts">
-	import { page as pageStore } from "$app/stores";
-	import Pinterest from "$lib/icons/Pinterest.svelte";
-	import Heading2 from "./util/Heading2.svelte";
-	import Paragraph from "./util/Paragraph.svelte";
-	import Section from "./util/Section.svelte";
-
-	let page: any;
-	pageStore.subscribe((l) => {
-		page = l;
-	});
-	const pins = page?.data?.pins;
+	export let pins: any[];
 	const pinsClone = Object.assign([], pins);
 
 	function getImageFromPin(pin: any) {
@@ -53,40 +43,24 @@
 	}
 </script>
 
-<Section>
-	<Heading2>Ellie's pins</Heading2>
-	<Paragraph>I love to go on Pinterest and pin whatever I see fit!</Paragraph>
-
-	<div class="grid">
-		{#each cols as col}
-			<div
-				class="grid-item"
-				style="--cols: {col.span}; --row-span: {col.rowCount};"
-			>
-				{#each col.pins as pinRowItem}
-					<a
-						class="hover-shift"
-						href={`https://pinterest.com/pin/${pinRowItem.id}/`}
-						target="_blank"
-					>
-						<img src={getImageFromPin(pinRowItem)} alt="" />
-					</a>
-				{/each}
-			</div>
-		{/each}
-	</div>
-
-	<div class="social-link-wrapper">
-		<a
-			href="https://pinterest.com/ellienorton_/pins/"
-			target="_blank"
-			class="social-link"
+<div class="grid">
+	{#each cols as col}
+		<div
+			class="grid-item"
+			style="--cols: {col.span}; --row-span: {col.rowCount};"
 		>
-			<Pinterest />
-			See all my pins
-		</a>
-	</div>
-</Section>
+			{#each col.pins as pinRowItem}
+				<a
+					class="hover-shift"
+					href={`https://pinterest.com/pin/${pinRowItem.id}/`}
+					target="_blank"
+				>
+					<img src={getImageFromPin(pinRowItem)} alt="" />
+				</a>
+			{/each}
+		</div>
+	{/each}
+</div>
 
 <style lang="scss">
 	.grid {
@@ -111,25 +85,6 @@
 				height: 100%;
 				object-fit: cover;
 				border-radius: 20px;
-			}
-		}
-	}
-	.social-link-wrapper {
-		width: 100%;
-		margin-top: 30px;
-		display: flex;
-		justify-content: center;
-
-		.social-link {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 20px;
-			color: var(--text-harsh);
-			text-decoration: none;
-
-			&:hover {
-				text-decoration: underline;
 			}
 		}
 	}
