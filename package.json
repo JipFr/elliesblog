@@ -30,6 +30,8 @@
 	"type": "module",
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
-		"sass": "^1.69.5"
+		"@tinacms/cli": "^1.5.31",
+		"sass": "^1.69.5",
+		"tinacms": "^1.5.22"
 	}
 }
