@@ -57,14 +57,14 @@
 	<p>I love to go on Pinterest and pin whatever I see fit!</p>
 	<div class="grid">
 		{#each cols as col}
-			{#each col.pins as pinRowItem}
-				<div
-					class="grid-item"
-					style="--cols: {col.span}; --row-span: {col.rowCount};"
-				>
+			<div
+				class="grid-item"
+				style="--cols: {col.span}; --row-span: {col.rowCount};"
+			>
+				{#each col.pins as pinRowItem}
 					<img src={getImageFromPin(pinRowItem)} alt="" />
-				</div>
-			{/each}
+				{/each}
+			</div>
 		{/each}
 	</div>
 	<!-- {JSON.stringify(pins)} -->
@@ -88,20 +88,18 @@
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(9, 1fr);
-		grid-auto-rows: 160px;
 		grid-gap: 10px;
 		margin-top: 30px;
-		height: 280px;
-		grid-auto-flow: column;
 
 		.grid-item {
 			grid-column: span var(--cols);
-			grid-row: span var(--row-span);
-			// display: grid;
-			// grid-template-rows: 1fr 1fr;
-			// height: 280px;
+			display: grid;
+			--h: 180px;
+			grid-template-rows: var(--h) var(--h);
+			grid-gap: inherit;
 
 			img {
+				grid-row: span var(--row-span);
 				display: block;
 				width: 100%;
 				height: 100%;
