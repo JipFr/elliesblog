@@ -63,7 +63,13 @@
 				style="--cols: {col.span}; --row-span: {col.rowCount};"
 			>
 				{#each col.pins as pinRowItem}
-					<img src={getImageFromPin(pinRowItem)} alt="" />
+					<a
+						class="hover-shift"
+						href={`https://pinterest.com/pin/${pinRowItem.id}/`}
+						target="_blank"
+					>
+						<img src={getImageFromPin(pinRowItem)} alt="" />
+					</a>
 				{/each}
 			</div>
 		{/each}
@@ -109,8 +115,10 @@
 			grid-template-rows: var(--h) var(--h);
 			grid-gap: inherit;
 
-			img {
+			a {
 				grid-row: span var(--row-span);
+			}
+			img {
 				display: block;
 				width: 100%;
 				height: 100%;
@@ -137,5 +145,15 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	.hover-shift img {
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	.hover-shift:hover img {
+		position: relative;
+		z-index: 100;
+		transform: translateX(10px) rotate3d(14, 27, 6, 45deg);
+		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 	}
 </style>
