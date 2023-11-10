@@ -88,7 +88,7 @@
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(9, 1fr);
-		grid-auto-rows: 140px;
+		grid-auto-rows: 160px;
 		grid-gap: 10px;
 		margin-top: 30px;
 		height: 280px;
