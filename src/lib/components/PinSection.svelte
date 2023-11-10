@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page as pageStore } from "$app/stores";
+	import Pinterest from "$lib/icons/Pinterest.svelte";
 
 	let page: any;
 	pageStore.subscribe((l) => {
@@ -67,7 +68,17 @@
 			</div>
 		{/each}
 	</div>
-	<!-- {JSON.stringify(pins)} -->
+
+	<div class="social-link-wrapper">
+		<a
+			href="https://pinterest.com/ellienorton_/pins/"
+			target="_blank"
+			class="social-link"
+		>
+			<Pinterest />
+			See all my pins
+		</a>
+	</div>
 </section>
 
 <style lang="scss">
@@ -105,6 +116,25 @@
 				height: 100%;
 				object-fit: cover;
 				border-radius: 20px;
+			}
+		}
+	}
+	.social-link-wrapper {
+		width: 100%;
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+
+		.social-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 20px;
+			color: var(--text-harsh);
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 	}

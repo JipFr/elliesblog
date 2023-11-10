@@ -12,6 +12,7 @@
 	:global(:root) {
 		--body: #eee8d8;
 		--text: #634904;
+		--text-harsh: #000;
 		--border: #634904;
 	}
 	:global(body) {
@@ -37,6 +38,7 @@
 		min-height: 100dvh;
 		padding: 0 30px;
 		position: relative;
+		padding-bottom: 50px;
 
 		&::after,
 		&::before {
