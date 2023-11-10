@@ -1,0 +1,11 @@
+body {
+	margin: 0;
+	background: #EEE8D8;
+	display: flex;
+	justify-content: center;
+}
+
+img {
+	width: 100%;
+	max-width: 1512px;
+}
