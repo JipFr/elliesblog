@@ -11,10 +11,22 @@
 <style lang="scss">
 	:global(:root) {
 		--body: #eee8d8;
+		--bg-image: url("/background.png");
 		--text: #634904;
 		--text-harsh: #000;
 		--border: #634904;
 	}
+
+	@media (prefers-color-scheme: dark) {
+		:global(:root) {
+			--body: #01030d;
+			--bg-image: url("/background-dark.png");
+			--text: #767b9a;
+			--text-harsh: #717797;
+			--border: #7b82b4;
+		}
+	}
+
 	:global(body) {
 		margin: 0;
 		padding: 0;
@@ -22,7 +34,7 @@
 			sans-serif;
 		overflow-x: hidden;
 
-		background-image: url("/background.png");
+		background-image: var(--bg-image);
 
 		background-color: var(--body);
 		color: var(--text);

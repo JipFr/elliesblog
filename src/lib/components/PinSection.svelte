@@ -89,7 +89,7 @@
 
 <style lang="scss">
 	section {
-		margin: 43px 0;
+		margin-top: 43px;
 	}
 	h2,
 	p {
