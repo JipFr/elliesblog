@@ -12,13 +12,13 @@
 	</Paragraph>
 
 	<div class="grid">
-		<a href="#l" class="hover-shift">
+		<a href="/" class="hover-shift">
 			<BigImageCard url="/people/paul.png">Paul</BigImageCard>
 		</a>
-		<a href="#l" class="hover-shift">
+		<a href="/" class="hover-shift">
 			<BigImageCard url="/people/daisy.png">Daisy</BigImageCard>
 		</a>
-		<a href="#l" class="hover-shift">
+		<a href="/" class="hover-shift">
 			<BigImageCard url="/people/tom.webp">Tom</BigImageCard>
 		</a>
 	</div>
