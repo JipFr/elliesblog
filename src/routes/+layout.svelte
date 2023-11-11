@@ -32,23 +32,24 @@
 	:global(:root) {
 		--body: #eee8d8;
 		--bg-image: url("/background.png");
+		--bg-opacity: 0.2;
 		--text: #634904;
 		--text-harsh: #000;
 		--border: #634904;
 		--highlight: #f7d26f;
 	}
 
-	@media (prefers-color-scheme: dark) {
-		:global(:root) {
-			--body: #01030d;
-			--bg-image: url("/background-dark.png");
-			--text: #767b9a;
-			--text-harsh: #717797;
-			--border: #292d46;
-			--highlight: url("https://png.pngtree.com/thumb_back/fh260/background/20210126/pngtree-cartoon-five-pointed-star-solid-color-background-image_541007.jpg"),
-				#2626a2;
-		}
-	}
+	// @media (prefers-color-scheme: dark) {
+	// 	:global(:root) {
+	// 		--body: #01030d;
+	// 		--bg-image: url("/background-dark.png");
+	// 		--text: #767b9a;
+	// 		--text-harsh: #717797;
+	// 		--border: #292d46;
+	// 		--highlight: url("https://png.pngtree.com/thumb_back/fh260/background/20210126/pngtree-cartoon-five-pointed-star-solid-color-background-image_541007.jpg"),
+	// 			#2626a2;
+	// 	}
+	// }
 
 	:global(body) {
 		margin: 0;
@@ -57,10 +58,19 @@
 			sans-serif;
 		overflow-x: hidden;
 
-		background-image: var(--bg-image);
-
 		background-color: var(--body);
 		color: var(--text);
+		position: relative;
+	}
+	:global(body::before) {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: var(--bg-opacity);
+		background-image: var(--bg-image);
 	}
 	:global(*) {
 		box-sizing: border-box;
@@ -104,6 +114,10 @@
 	}
 
 	@media (max-width: 1000px) {
+		:global(:root) {
+			--text: #231a02;
+			--bg-opacity: 0.15;
+		}
 		.body {
 			padding-left: 0;
 			padding-right: 0;
