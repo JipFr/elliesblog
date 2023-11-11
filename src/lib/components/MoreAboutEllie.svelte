@@ -59,14 +59,14 @@
 			}
 
 			&::before {
-				background: url("/🌞.png");
+				background: url("/emoji/🌞.png");
 				top: 0;
 				left: 0;
 				transform: translate(-30%, -30%);
 			}
 
 			&::after {
-				background: url("☁.png");
+				background: url("/emoji/cloud.png");
 				top: 7%;
 				right: 7%;
 				transform: rotate(45deg);
