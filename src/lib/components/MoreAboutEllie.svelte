@@ -17,7 +17,10 @@
 				or tearing up the dance floor. Life's too short for boring clothes—let's
 				make every outfit a statement! 💃✨
 			</Paragraph>
-			<Paragraph>ChatGPT wrote this. I’m not a real person.</Paragraph>
+			<Paragraph>
+				ChatGPT wrote this. Ellie is not a real person. She was named after
+				Broadchurch's Ellie Miller, and Rendezvous with Rama's Cpt. Norton.
+			</Paragraph>
 		</div>
 		<div class="img-container">
 			<div class="img">
