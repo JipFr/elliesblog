@@ -2,12 +2,14 @@
 	import Section from "./util/Section.svelte";
 	import Heading2 from "./util/Heading2.svelte";
 	import Paragraph from "./util/Paragraph.svelte";
+
+	export let title = "About Ellie Norton";
 </script>
 
 <Section>
 	<div class="flex">
 		<div>
-			<Heading2>About Ellie Norton</Heading2>
+			<Heading2>{title}</Heading2>
 			<Paragraph>
 				Hey, I'm Ellie, your fashion-obsessed friend! On my blog, I do what I
 				like and nothing else, and I radiate all the good vibes. When I'm not

@@ -5,6 +5,8 @@
 	import Section from "$lib/components/util/Section.svelte";
 	import Cols from "$lib/components/Cols.svelte";
 	import AboutEllie from "$lib/components/AboutEllie.svelte";
+	import Divider from "$lib/components/Divider.svelte";
+	import MoreAboutEllie from "$lib/components/MoreAboutEllie.svelte";
 
 	export let data: PageData;
 	const post = data.post;
@@ -18,6 +20,10 @@
 				<img class="thumbnail" src={post.meta.thumbnail} alt="" />
 			{/if}
 			{@html post.html}
+
+			<Divider />
+
+			<MoreAboutEllie title="About the author" />
 		</div>
 		<div class="post-right">
 			<AboutEllie align="center" />

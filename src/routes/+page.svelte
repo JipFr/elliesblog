@@ -16,9 +16,13 @@
 <Cols>
 	<div>
 		<PeoplePicks />
+
 		<Divider />
+
 		<MoreAboutEllie />
+
 		<Divider />
+
 		<Section>
 			<Heading2>Ellie's pins</Heading2>
 			<Paragraph>
