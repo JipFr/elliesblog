@@ -10,6 +10,7 @@
 	.big-image-card {
 		background-image: linear-gradient(to top, black, transparent 50%),
 			var(--url);
+		background-color: #033428;
 		background-size: cover;
 		background-position: center;
 		height: 100%;

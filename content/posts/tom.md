@@ -3,7 +3,7 @@ title: Tom Hiddleston
 title_short: Tom
 slug: tom
 date: 2023-11-08T23:00:00.000Z
-thumbnail: /people/tom.webp
+thumbnail: /people/tom.png
 ---
 
 **Every natural place has a spirit that minds it**. Tzipora had never met a desert spirit before, and she went looking for one in Cherry, Nevada. With air force jets glinting in the sky overhead, and the temperature scorching the mesas that surround the military town, she found one inside a burrow. In an instant, it had transformed into a rattlesnake and tried to scare her, but she dropped to her knees and begged it to forgive her for waking it. She offered it a gumdrop and it returned to its natural, translucent form.
@@ -16,10 +16,10 @@ Tzipora has no time for God; she is a zealous humanist at her core. The spirits 
 
 The written characters are Vekllei, and make a poem;
 
-*Tzipora is looking for all good things in the world*
+_Tzipora is looking for all good things in the world_
 
-*The spirits are the mothers and daughters of all good things in the world*
+_The spirits are the mothers and daughters of all good things in the world_
 
-*What a beautiful place, crafted in the love between the Earth and children*
+_What a beautiful place, crafted in the love between the Earth and children_
 
 If you have any questions, I like to hear them. If you’ve got illustration tips, I wouldn’t mind some too ;)
