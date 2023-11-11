@@ -4,8 +4,9 @@
 	export let image = "/favicon.png";
 </script>
 
-<meta name="og:title" content={title} />
-<meta name="twitter:title" content={title} />
+<title>🌸 {title}</title>
+<meta name="og:title" content={"🌸 " + title} />
+<meta name="twitter:title" content={"🌸 " + title} />
 
 <meta name="description" content={description} />
 <meta name="og:description" content={description} />
