@@ -3,6 +3,10 @@
 	import Heading2 from "./util/Heading2.svelte";
 	import Paragraph from "./util/Paragraph.svelte";
 	import Section from "./util/Section.svelte";
+
+	import { page as pageStore } from "$app/stores";
+
+	$: page = $pageStore.data;
 </script>
 
 <Section>
@@ -12,15 +16,13 @@
 	</Paragraph>
 
 	<div class="grid">
-		<a href="/" class="hover-shift">
-			<BigImageCard url="/people/paul.png">Paul</BigImageCard>
-		</a>
-		<a href="/" class="hover-shift">
-			<BigImageCard url="/people/daisy.png">Daisy</BigImageCard>
-		</a>
-		<a href="/" class="hover-shift">
-			<BigImageCard url="/people/tom.webp">Tom</BigImageCard>
-		</a>
+		{#each page.posts as post}
+			<a href={`/${post.meta.slug}`} class="hover-shift">
+				<BigImageCard url={post.meta.thumbnail}
+					>{post.meta.title_short}</BigImageCard
+				>
+			</a>
+		{/each}
 	</div>
 </Section>
 

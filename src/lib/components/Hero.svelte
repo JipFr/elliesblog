@@ -3,7 +3,7 @@
 </script>
 
 <header>
-	<h1>Ellie's blog</h1>
+	<a href="/"><h1>Ellie's blog</h1></a>
 	<AboutEllie />
 </header>
 
@@ -15,6 +15,14 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 	h1 {
 		margin: 0;

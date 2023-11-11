@@ -1,9 +1,11 @@
 <script>
 	import Container from "$lib/components/Container.svelte";
+	import Hero from "$lib/components/Hero.svelte";
 </script>
 
 <Container>
 	<div class="body">
+		<Hero />
 		<slot />
 	</div>
 </Container>

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Cols from "$lib/components/Cols.svelte";
 	import Divider from "$lib/components/Divider.svelte";
-	import Hero from "$lib/components/Hero.svelte";
 	import PeoplePicks from "$lib/components/PeoplePicks.svelte";
 	import PinSection from "$lib/components/PinSection.svelte";
 	import Heading2 from "$lib/components/util/Heading2.svelte";
@@ -14,7 +13,6 @@
 
 <Cols>
 	<div>
-		<Hero />
 		<PeoplePicks />
 
 		<Divider />
