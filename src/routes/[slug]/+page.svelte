@@ -77,5 +77,8 @@
 			margin-right: 0;
 			margin-bottom: 20px;
 		}
+		.post-right {
+			display: none;
+		}
 	}
 </style>
