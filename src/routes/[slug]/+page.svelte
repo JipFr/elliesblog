@@ -11,36 +11,37 @@
 <Section>
 	<div class="post">
 		<Heading2>{post.meta.title}</Heading2>
-		<img class="thumbnail" src={post.meta.thumbnail} alt="" />
+		{#if post.meta.thumbnail}
+			<img class="thumbnail" src={post.meta.thumbnail} alt="" />
+		{/if}
 		{@html post.html}
 	</div>
 </Section>
 
 <style lang="scss">
 	.post {
-		background-image: url(https://alpha.cafe/img/notebook.png);
-		padding: 20px;
-		border-radius: 20px;
 		max-width: 700px;
 		margin: 0 auto;
 
 		.thumbnail {
 			width: 120px;
-			float: left;
-			margin-top: 20px;
-			margin-right: 20px;
+			float: right;
+			margin-top: 40px;
+			margin-left: 40px;
 			border-radius: 10px;
 		}
 
 		:global(h2) {
-			font-size: 1.5rem;
+			font-size: 2rem;
 			font-weight: 900;
 		}
 
+		:global(h2:not(:first-child)) {
+			font-size: 1.5rem;
+			margin-top: 40px;
+		}
+
 		:global(p) {
-			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-				Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-				sans-serif;
 			font-size: 1.2rem;
 		}
 

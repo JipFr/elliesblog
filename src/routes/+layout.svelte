@@ -1,7 +1,24 @@
-<script>
+<script lang="ts">
 	import Container from "$lib/components/Container.svelte";
 	import Hero from "$lib/components/Hero.svelte";
+	import Meta from "$lib/components/util/Meta.svelte";
+
+	import { page } from "$app/stores";
+	const post = $page.data?.post;
 </script>
+
+<svelte:head>
+	{#if post}
+		<Meta
+			title={`${post.meta.title} on Ellie's blog`}
+			description={post.md.slice(0, 100).replace(/\*|_|\[\]/g, "") + "..."}
+			image={post.meta.thumbnail}
+		/>
+	{:else}
+		<Meta />
+	{/if}
+	<meta name="theme-color" content="#f7d26f" />
+</svelte:head>
 
 <Container>
 	<div class="body">
