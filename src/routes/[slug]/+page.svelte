@@ -34,7 +34,7 @@
 <style lang="scss">
 	.post {
 		.thumbnail {
-			width: 120px;
+			width: 25%;
 			float: right;
 			margin-top: 40px;
 			margin-left: 40px;
