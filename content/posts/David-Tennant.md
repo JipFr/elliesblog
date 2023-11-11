@@ -3,7 +3,7 @@ title: David Tennant
 title_short: David
 slug: david
 date: 2023-11-10T23:00:00.000Z
-thumbnail: /people/david.png
+thumbnail: /people/david.webp
 ---
 
 # The Egregious State of David Tennant's Hair

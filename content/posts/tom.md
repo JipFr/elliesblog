@@ -3,7 +3,7 @@ title: Tom Hiddleston
 title_short: Tom
 slug: tom
 date: 2023-11-08T23:00:00.000Z
-thumbnail: /people/tom.png
+thumbnail: /people/tom.webp
 ---
 
 **Every natural place has a spirit that minds it**. Tzipora had never met a desert spirit before, and she went looking for one in Cherry, Nevada. With air force jets glinting in the sky overhead, and the temperature scorching the mesas that surround the military town, she found one inside a burrow. In an instant, it had transformed into a rattlesnake and tried to scare her, but she dropped to her knees and begged it to forgive her for waking it. She offered it a gumdrop and it returned to its natural, translucent form.

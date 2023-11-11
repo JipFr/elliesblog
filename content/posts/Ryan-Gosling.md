@@ -3,7 +3,7 @@ title: Ryan Gosling
 title_short: Ryan
 slug: ryan
 date: 2023-11-10T23:00:00.000Z
-thumbnail: /people/ryan.jpeg
+thumbnail: /people/ryan.webp
 ---
 
 # The Nice Guys: A Comedy Masterpiece
