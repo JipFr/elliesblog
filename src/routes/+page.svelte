@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AboutEllie from "$lib/components/AboutEllie.svelte";
 	import Cols from "$lib/components/Cols.svelte";
 	import Divider from "$lib/components/Divider.svelte";
 	import PeoplePicks from "$lib/components/PeoplePicks.svelte";

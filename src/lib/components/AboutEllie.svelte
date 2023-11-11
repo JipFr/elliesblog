@@ -1,4 +1,8 @@
-<div>
+<script lang="ts">
+	export let align: "left" | "right" | "center" = "center";
+</script>
+
+<div class="about-top" data-align={align}>
 	<div class="about-wrapper">
 		<div class="about">
 			<div class="img-wrapper">
@@ -18,7 +22,6 @@
 	}
 	.about {
 		display: flex;
-		flex-direction: row-reverse;
 		align-items: flex-end;
 	}
 	.img-wrapper {
@@ -49,14 +52,13 @@
 	}
 
 	.text-wrapper {
-		margin-bottom: 0.5rem;
+		margin: 0.5rem 1rem;
 	}
 
 	h2,
 	p {
 		margin: 0;
-		text-align: right;
-		margin-right: 1rem;
+		text-align: var(--text-align);
 	}
 	p {
 		margin-top: 10px;
@@ -64,6 +66,22 @@
 	h2 {
 		margin-top: 1.5rem;
 		font-size: 1.2rem;
+	}
+
+	[data-align="center"] .about {
+		--text-align: center;
+		flex-direction: column;
+		align-items: center;
+		max-width: 170px;
+	}
+	[data-align="right"] .about {
+		flex-direction: row-reverse;
+		--text-align: right;
+	}
+
+	[data-align="left"] .about {
+		flex-direction: row;
+		--text-align: left;
 	}
 
 	@media (max-width: 700px) {

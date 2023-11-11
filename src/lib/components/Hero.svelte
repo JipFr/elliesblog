@@ -1,10 +1,15 @@
 <script>
 	import AboutEllie from "./AboutEllie.svelte";
+
+	import { page } from "$app/stores";
+	$: post = $page.data?.post;
 </script>
 
-<header>
+<header data-has-post={!!post}>
 	<a href="/"><h1>Ellie's blog</h1></a>
-	<AboutEllie />
+	<div class="about">
+		<AboutEllie align="right" />
+	</div>
 </header>
 
 <style lang="scss">
@@ -15,6 +20,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
+		min-height: 150px;
+	}
+	header[data-has-post="true"] .about {
+		opacity: 0;
 	}
 	a {
 		text-decoration: none;
@@ -34,6 +43,11 @@
 		header {
 			flex-direction: column;
 			align-items: flex-start;
+			justify-content: flex-end;
+
+			&[data-has-post="true"] .about {
+				display: none;
+			}
 		}
 	}
 </style>

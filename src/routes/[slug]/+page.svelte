@@ -3,26 +3,30 @@
 
 	import Heading2 from "$lib/components/util/Heading2.svelte";
 	import Section from "$lib/components/util/Section.svelte";
+	import Cols from "$lib/components/Cols.svelte";
+	import AboutEllie from "$lib/components/AboutEllie.svelte";
 
 	export let data: PageData;
 	const post = data.post;
 </script>
 
 <Section>
-	<div class="post">
-		<Heading2>{post.meta.title}</Heading2>
-		{#if post.meta.thumbnail}
-			<img class="thumbnail" src={post.meta.thumbnail} alt="" />
-		{/if}
-		{@html post.html}
-	</div>
+	<Cols>
+		<div class="post">
+			<Heading2>{post.meta.title}</Heading2>
+			{#if post.meta.thumbnail}
+				<img class="thumbnail" src={post.meta.thumbnail} alt="" />
+			{/if}
+			{@html post.html}
+		</div>
+		<div class="post-right">
+			<AboutEllie align="center" />
+		</div>
+	</Cols>
 </Section>
 
 <style lang="scss">
 	.post {
-		max-width: 700px;
-		margin: 0 auto;
-
 		.thumbnail {
 			width: 120px;
 			float: right;
@@ -49,6 +53,11 @@
 			max-width: 100%;
 			border-radius: 20px;
 		}
+	}
+
+	.post-right {
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	@media (max-width: 600px) {
