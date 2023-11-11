@@ -39,13 +39,13 @@
 		font-size: 42px;
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: 800px) {
 		header {
 			flex-direction: column;
 			align-items: flex-start;
 			justify-content: flex-end;
 
-			&[data-has-post="true"] .about {
+			.about {
 				display: none;
 			}
 		}

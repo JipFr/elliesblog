@@ -2,6 +2,7 @@
 	import AboutEllie from "$lib/components/AboutEllie.svelte";
 	import Cols from "$lib/components/Cols.svelte";
 	import Divider from "$lib/components/Divider.svelte";
+	import MoreAboutEllie from "$lib/components/MoreAboutEllie.svelte";
 	import PeoplePicks from "$lib/components/PeoplePicks.svelte";
 	import PinSection from "$lib/components/PinSection.svelte";
 	import Heading2 from "$lib/components/util/Heading2.svelte";
@@ -15,9 +16,9 @@
 <Cols>
 	<div>
 		<PeoplePicks />
-
 		<Divider />
-
+		<MoreAboutEllie />
+		<Divider />
 		<Section>
 			<Heading2>Ellie's pins</Heading2>
 			<Paragraph>
