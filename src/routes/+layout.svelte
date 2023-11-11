@@ -11,7 +11,7 @@
 	{#if post}
 		<Meta
 			title={`${post.meta.title} on Ellie's blog`}
-			description={post.md.slice(0, 100).replace(/\*|_|\[\]/g, "") + "..."}
+			description={post.md.slice(0, 100).replace(/#\*|_|\[\]/g, "") + "..."}
 			image={post.meta.thumbnail}
 		/>
 	{:else}
@@ -107,6 +107,7 @@
 		.body {
 			padding-left: 0;
 			padding-right: 0;
+			background-color: transparent;
 
 			&::before,
 			&::after {
