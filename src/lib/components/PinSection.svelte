@@ -92,11 +92,13 @@
 	.hover-shift img {
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
 	}
-	.hover-shift:hover img {
-		position: relative;
-		z-index: 100;
-		transform: rotateX(-8deg) rotateY(-18deg);
-		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	@media (hover: hover) {
+		.hover-shift:hover img {
+			position: relative;
+			z-index: 100;
+			transform: rotateX(-8deg) rotateY(-18deg);
+			box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+		}
 	}
 
 	@media (max-width: 1000px) {
