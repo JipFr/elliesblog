@@ -15,14 +15,16 @@
 		Where I pick somebody and share what I think of their fashion choices!
 	</Paragraph>
 
-	<div class="grid">
-		{#each page.posts as post}
-			<a href={`/${post.meta.slug}`} class="hover-shift">
-				<BigImageCard url={post.meta.thumbnail}
-					>{post.meta.title_short}</BigImageCard
-				>
-			</a>
-		{/each}
+	<div class="grid-wrapper">
+		<div class="grid">
+			{#each page.posts as post}
+				<a href={`/${post.meta.slug}`} class="hover-shift">
+					<BigImageCard url={post.meta.thumbnail}
+						>{post.meta.title_short}</BigImageCard
+					>
+				</a>
+			{/each}
+		</div>
 	</div>
 </Section>
 
@@ -46,5 +48,59 @@
 		z-index: 100;
 		transform: rotateX(-8deg) rotateY(-18deg);
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 1000px) {
+		.grid-wrapper {
+			display: grid;
+			grid-template-columns: 100%;
+			width: calc(100% + 4rem);
+			margin-left: -2rem;
+			position: relative;
+		}
+		.grid {
+			display: flex;
+			overflow-x: auto;
+			overflow-y: hidden;
+			max-width: 100%;
+			scroll-snap-type: x mandatory;
+
+			&::before,
+			&::after {
+				content: "";
+				display: block;
+				width: 2rem;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				--direction: to left;
+				background: linear-gradient(
+					var(--direction),
+					transparent,
+					var(--body) 80%
+				);
+				z-index: 110;
+			}
+
+			&::after {
+				--direction: to right;
+				right: 0;
+				border-right: 5px solid var(--body);
+			}
+
+			> :global(*) {
+				min-width: 200px;
+				scroll-snap-align: start;
+				scroll-margin-left: 2rem;
+			}
+
+			> :global(*:first-child) {
+				margin-left: 2rem;
+			}
+
+			> :global(*:last-child) {
+				margin-right: 2rem;
+			}
+		}
 	}
 </style>

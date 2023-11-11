@@ -23,6 +23,7 @@
 	}
 	.img-wrapper {
 		width: 100px;
+		min-width: 100px;
 		background: var(--highlight);
 		padding-top: 20px;
 		border-radius: 20px 20px 0 0;
@@ -63,5 +64,21 @@
 	h2 {
 		margin-top: 1.5rem;
 		font-size: 1.2rem;
+	}
+
+	@media (max-width: 700px) {
+		.about {
+			flex-direction: row;
+			align-items: flex-end;
+
+			.text-wrapper {
+				margin-left: 1rem;
+			}
+
+			h2,
+			p {
+				text-align: left;
+			}
+		}
 	}
 </style>

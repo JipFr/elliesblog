@@ -8,4 +8,4 @@ thumbnail: /people/paul.png
 
 Hello world
 
-![](/people/paul.png)
+![](/background.png)

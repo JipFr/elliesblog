@@ -49,13 +49,17 @@
 			border-radius: 20px;
 		}
 	}
-	// .post :global(h2) {
-	// 	width: 100%;
-	// 	text-align: center;
-	// 	font-weight: bold;
-	// 	font-size: 1.5rem;
-	// 	padding: 30px 0;
-	// 	background: rgb(140 97 56 / 10%);
-	// 	border-radius: 20px;
-	// }
+
+	@media (max-width: 600px) {
+		.post {
+			width: 100%;
+			max-width: auto;
+		}
+		.post .thumbnail {
+			width: 100%;
+			border-radius: 20px;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+	}
 </style>

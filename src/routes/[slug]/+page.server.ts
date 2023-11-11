@@ -6,7 +6,6 @@ export const prerender = true;
 
 export const load: PageServerLoad = async ({ params }) => {
 	const posts = await getPosts();
-	console.log(params.slug);
 	const relevantPost = posts.find(
 		(post: any) => post.meta.slug === params.slug
 	);

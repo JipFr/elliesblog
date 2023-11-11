@@ -72,7 +72,7 @@
 		.grid-item {
 			grid-column: span var(--cols);
 			display: grid;
-			--h: 180px;
+			--h: clamp(70px, 15vw, 180px); // Max 180px, min 70px
 			grid-template-rows: var(--h) var(--h);
 			grid-gap: inherit;
 
@@ -97,5 +97,17 @@
 		z-index: 100;
 		transform: rotateX(-8deg) rotateY(-18deg);
 		box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	}
+
+	@media (max-width: 1000px) {
+		.grid {
+			grid-gap: 1px;
+			border-radius: 20px;
+			overflow: hidden;
+
+			.grid-item img {
+				border-radius: 0;
+			}
+		}
 	}
 </style>

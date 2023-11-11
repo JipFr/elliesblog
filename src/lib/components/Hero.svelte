@@ -29,4 +29,11 @@
 		font-weight: 900;
 		font-size: 42px;
 	}
+
+	@media (max-width: 700px) {
+		header {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 </style>

@@ -55,7 +55,7 @@
 		min-height: 100dvh;
 		padding: 0 30px;
 		position: relative;
-		padding-bottom: 50px;
+		padding-bottom: 100px;
 
 		&::after,
 		&::before {
@@ -82,6 +82,18 @@
 			--direction: to right;
 			right: 0;
 			transform: translateX(100%);
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.body {
+			padding-left: 0;
+			padding-right: 0;
+
+			&::before,
+			&::after {
+				display: none;
+			}
 		}
 	}
 </style>
