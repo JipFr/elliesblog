@@ -17,6 +17,7 @@
 	{:else}
 		<Meta />
 	{/if}
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="theme-color" content="#f7d26f" />
 </svelte:head>
 
