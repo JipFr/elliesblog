@@ -6,7 +6,7 @@
 	<div class="about-wrapper">
 		<div class="about">
 			<div class="img-wrapper">
-				<img src="/ellie.webp" alt="Ellie" />
+				<img src="/ellie.webp" alt="Ellie" width="100" height="136" />
 			</div>
 			<div class="text-wrapper">
 				<h2>About Ellie</h2>

@@ -1,5 +1,5 @@
 <div class="divider">
-	<img src="/🌷.png" alt="" />
+	<img src="/🌷.png" width="26" height="27" alt="" />
 </div>
 
 <style lang="scss">
