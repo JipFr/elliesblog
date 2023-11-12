@@ -4,8 +4,7 @@
 
 	function getImageFromPin(pin: any) {
 		const { images } = pin;
-		const { orig } = images;
-		return orig.url;
+		return images["474x"].url;
 	}
 
 	// Generate grid layout randomly
@@ -54,6 +53,7 @@
 					class="hover-shift"
 					href={`https://pinterest.com/pin/${pinRowItem.id}/`}
 					target="_blank"
+					aria-label={`Pinterest pin: ${pinRowItem.description}`}
 				>
 					<img src={getImageFromPin(pinRowItem)} alt="" />
 				</a>
