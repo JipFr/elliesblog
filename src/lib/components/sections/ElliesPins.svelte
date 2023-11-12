@@ -14,7 +14,7 @@
 <Section>
 	<Heading2>Ellie's pins</Heading2>
 	<Paragraph>I love to go on Pinterest and pin whatever I see fit!</Paragraph>
-	<PinGrid pins={data.pins} />
+	<PinGrid pins={data.pins} rowCount={1} />
 	<PinterestLink href="https://pinterest.com/ellienorton_/pins/">
 		See all my pins
 	</PinterestLink>

@@ -9,8 +9,6 @@
 	<Meta title="Ellie's people picks" />
 </svelte:head>
 
-<Section>
-	<Cols>
-		<PeoplePicks />
-	</Cols>
-</Section>
+<Cols>
+	<PeoplePicks />
+</Cols>

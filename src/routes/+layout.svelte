@@ -48,6 +48,7 @@
 		--text-harsh: #1f1f1f;
 		--border: #634904;
 		--highlight: #f7d26f;
+		--highlight-alt: #ffe397;
 	}
 
 	@media (prefers-color-scheme: dark) {
@@ -59,6 +60,7 @@
 			--border: #292d46;
 			--highlight: url("https://png.pngtree.com/thumb_back/fh260/background/20210126/pngtree-cartoon-five-pointed-star-solid-color-background-image_541007.jpg"),
 				#2626a2;
+			--highlight-alt: #1d1d81;
 		}
 	}
 

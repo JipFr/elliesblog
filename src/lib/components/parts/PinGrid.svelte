@@ -6,7 +6,7 @@
 
 	function getImageFromPin(pin: Pin) {
 		const { images } = pin;
-		return images["236x"].url;
+		return images["474x"].url;
 	}
 
 	interface Col {
@@ -17,7 +17,7 @@
 	}
 
 	// Generate grid layout randomly
-	const rowCount = 2;
+	export let rowCount = 2;
 	const colCount = 9;
 	const rows: Col[][] = [];
 
