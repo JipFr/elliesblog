@@ -25,7 +25,7 @@
 		<div class="img-container">
 			<div class="img">
 				<img
-					src="/ellie2.webp"
+					src="/ellie3.png"
 					alt="A cheerie Ellie (or something)"
 					width="235"
 					height="312"
