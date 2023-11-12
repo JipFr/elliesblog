@@ -29,6 +29,8 @@
 </Container>
 
 <style lang="scss">
+	@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;800&display=swap");
+
 	:global(:root) {
 		--body: #eee8d8;
 		--bg-image: url("/background.png");
