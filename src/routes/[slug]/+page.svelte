@@ -3,10 +3,10 @@
 
 	import Heading2 from "$lib/components/util/Heading2.svelte";
 	import Section from "$lib/components/util/Section.svelte";
-	import Cols from "$lib/components/Cols.svelte";
-	import AboutEllie from "$lib/components/AboutEllie.svelte";
-	import Divider from "$lib/components/Divider.svelte";
-	import MoreAboutEllie from "$lib/components/MoreAboutEllie.svelte";
+	import Cols from "$lib/components/util/Cols.svelte";
+	import AboutEllie from "$lib/components/parts/AboutEllie.svelte";
+	import Divider from "$lib/components/util/Divider.svelte";
+	import MoreAboutEllie from "$lib/components/sections/MoreAboutEllie.svelte";
 
 	export let data: PageData;
 	const post = data.post;

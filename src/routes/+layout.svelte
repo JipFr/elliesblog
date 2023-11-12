@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Container from "$lib/components/Container.svelte";
-	import Hero from "$lib/components/Hero.svelte";
+	import Container from "$lib/components/util/Container.svelte";
+	import Hero from "$lib/components/sections/Hero.svelte";
 	import Meta from "$lib/components/util/Meta.svelte";
 
 	import { page } from "$app/stores";

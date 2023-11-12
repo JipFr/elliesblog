@@ -1,7 +1,7 @@
 <script>
-	import Section from "./util/Section.svelte";
-	import Heading2 from "./util/Heading2.svelte";
-	import Paragraph from "./util/Paragraph.svelte";
+	import Section from "../util/Section.svelte";
+	import Heading2 from "../util/Heading2.svelte";
+	import Paragraph from "../util/Paragraph.svelte";
 
 	export let title = "About Ellie Norton";
 </script>

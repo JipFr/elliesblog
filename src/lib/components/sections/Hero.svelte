@@ -1,5 +1,5 @@
 <script>
-	import AboutEllie from "./AboutEllie.svelte";
+	import AboutEllie from "../parts/AboutEllie.svelte";
 
 	import { page } from "$app/stores";
 	$: post = $page.data?.post;

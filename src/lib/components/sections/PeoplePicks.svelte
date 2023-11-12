@@ -1,8 +1,8 @@
 <script>
-	import BigImageCard from "./BigImageCard.svelte";
-	import Heading2 from "./util/Heading2.svelte";
-	import Paragraph from "./util/Paragraph.svelte";
-	import Section from "./util/Section.svelte";
+	import BigImageCard from "../parts/BigImageCard.svelte";
+	import Heading2 from "../util/Heading2.svelte";
+	import Paragraph from "../util/Paragraph.svelte";
+	import Section from "../util/Section.svelte";
 
 	import { page as pageStore } from "$app/stores";
 
@@ -19,9 +19,9 @@
 		<div class="grid">
 			{#each page.posts as post}
 				<a href={`/${post.meta.slug}`} class="hover-shift">
-					<BigImageCard url={post.meta.thumbnail}
-						>{post.meta.title_short}</BigImageCard
-					>
+					<BigImageCard url={post.meta.thumbnail}>
+						{post.meta.title_short}
+					</BigImageCard>
 				</a>
 			{/each}
 		</div>
