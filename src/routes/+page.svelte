@@ -9,7 +9,7 @@
 
 <Cols>
 	<div>
-		<PeoplePicks />
+		<PeoplePicks oneRow />
 
 		<Divider />
 

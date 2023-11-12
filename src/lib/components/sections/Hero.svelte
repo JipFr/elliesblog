@@ -3,10 +3,14 @@
 
 	import { page } from "$app/stores";
 	$: post = $page.data?.post;
+	$: meta = $page.data?.meta;
 </script>
 
 <header data-has-post={!!post}>
-	<a href="/"><h1>Ellie's blog</h1></a>
+	<div>
+		<h3>{meta?.subheading || ""}</h3>
+		<a href="/"><h1>Ellie's blog</h1></a>
+	</div>
 	<div class="about">
 		<AboutEllie align="right" />
 	</div>
@@ -37,6 +41,10 @@
 		margin: 0;
 		font-weight: 800;
 		font-size: 42px;
+	}
+
+	h3 {
+		margin: 0;
 	}
 
 	@media (max-width: 800px) {

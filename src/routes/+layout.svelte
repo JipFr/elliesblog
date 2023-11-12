@@ -4,15 +4,15 @@
 	import Meta from "$lib/components/util/Meta.svelte";
 
 	import { page } from "$app/stores";
-	const post = $page.data?.post;
+	$: meta = $page.data?.meta;
 </script>
 
 <svelte:head>
-	{#if post}
+	{#if meta}
 		<Meta
-			title={`${post.meta.title} on Ellie's blog`}
-			description={post.md.slice(0, 100).replace(/#\*|_|\[\]/g, "") + "..."}
-			image={post.meta.thumbnail}
+			title={meta.title}
+			description={meta.description}
+			image={meta.image}
 		/>
 	{:else}
 		<Meta />

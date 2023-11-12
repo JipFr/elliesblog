@@ -15,5 +15,11 @@ export const load: PageServerLoad = async ({ params }) => {
 
 	return {
 		post: relevantPost,
+		meta: {
+			title: `${relevantPost.meta.title} on Ellie's blog`,
+			description:
+				relevantPost.md.slice(0, 100).replace(/#\*|_|\[\]/g, "") + "...",
+			image: relevantPost.meta.thumbnail,
+		},
 	};
 };

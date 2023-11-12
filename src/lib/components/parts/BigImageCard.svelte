@@ -12,7 +12,7 @@
 			var(--url);
 		background-size: cover;
 		background-position: center;
-		height: 100%;
+		width: 100%;
 		padding: 20px 10px;
 		font-size: 2rem;
 		color: white;
