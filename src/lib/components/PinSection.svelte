@@ -55,7 +55,7 @@
 					target="_blank"
 					aria-label={`Pinterest pin: ${pinRowItem.description}`}
 				>
-					<img src={getImageFromPin(pinRowItem)} alt="" />
+					<img loading="lazy" src={getImageFromPin(pinRowItem)} alt="" />
 				</a>
 			{/each}
 		</div>
