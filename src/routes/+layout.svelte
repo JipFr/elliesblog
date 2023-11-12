@@ -18,7 +18,16 @@
 		<Meta />
 	{/if}
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="theme-color" content="#f7d26f" />
+	<meta
+		name="theme-color"
+		content="#f7d26f"
+		media="(prefers-color-scheme: light)"
+	/>
+	<meta
+		name="theme-color"
+		content="#000"
+		media="(prefers-color-scheme: dark)"
+	/>
 </svelte:head>
 
 <Container>
