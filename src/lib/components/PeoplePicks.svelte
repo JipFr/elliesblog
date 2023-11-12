@@ -67,29 +67,6 @@
 			max-width: 100%;
 			scroll-snap-type: x mandatory;
 
-			&::before,
-			&::after {
-				content: "";
-				display: block;
-				width: 2rem;
-				height: 100%;
-				position: absolute;
-				top: 0;
-				--direction: to left;
-				background: linear-gradient(
-					var(--direction),
-					transparent,
-					var(--body) 80%
-				);
-				z-index: 110;
-			}
-
-			&::after {
-				--direction: to right;
-				right: 0;
-				border-right: 5px solid var(--body);
-			}
-
 			> :global(*) {
 				min-width: 200px;
 				scroll-snap-align: start;
@@ -101,7 +78,13 @@
 			}
 
 			> :global(*:last-child) {
-				margin-right: 2rem;
+				display: flex;
+			}
+			> :global(*:last-child::after) {
+				content: "";
+				display: block;
+				min-width: 2rem;
+				height: 1px;
 			}
 		}
 	}
