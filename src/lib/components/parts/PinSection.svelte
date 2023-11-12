@@ -17,55 +17,64 @@
 	}
 
 	// Generate grid layout randomly
+	const rowCount = 2;
 	const colCount = 9;
-	let colsFilled = 0;
-	let cols: Col[] = [];
+	const rows: Col[][] = [];
 
-	while (colsFilled < colCount) {
-		const possibleCols = [2, 2, 3];
-		const colsToFill = Math.min(
-			possibleCols[Math.floor(Math.random() * possibleCols.length)],
-			colCount - colsFilled
-		);
+	for (let r = 0; r < rowCount; r++) {
+		let cols: Col[] = [];
+		let colsFilled = 0;
+		while (colsFilled < colCount) {
+			const possibleCols = [2, 2, 3];
+			const colsToFill = Math.min(
+				possibleCols[Math.floor(Math.random() * possibleCols.length)],
+				colCount - colsFilled
+			);
 
-		const booleanRandom = Math.random() >= 0.5;
-		const rows = colsToFill === 2 ? (booleanRandom ? 2 : 1) : 1;
+			const booleanRandom = Math.random() >= 0.5;
+			const rows = colsToFill === 2 ? (booleanRandom ? 2 : 1) : 1;
 
-		if (colsToFill === 2 || colsToFill === 3) {
-			cols.push({
-				span: colsToFill,
-				pins: pinsClone.splice(0, rows),
-				rowCount: rows === 2 ? 1 : 2,
-				t: colsFilled,
-			});
-			colsFilled += colsToFill;
+			if (colsToFill === 2 || colsToFill === 3) {
+				cols.push({
+					span: colsToFill,
+					pins: pinsClone.splice(0, rows),
+					rowCount: rows === 2 ? 1 : 2,
+					t: colsFilled,
+				});
+				colsFilled += colsToFill;
+			}
+			if (colsToFill === 1) {
+				const last = cols[cols.length - 1];
+				cols[cols.length - 1] = {
+					...last,
+					span: last.span + 1,
+				};
+				colsFilled++;
+			}
 		}
-		if (colsToFill === 1) {
-			const last = cols[cols.length - 1];
-			cols[cols.length - 1] = {
-				...last,
-				span: last.span + 1,
-			};
-			colsFilled++;
-		}
+		rows.push(cols);
 	}
 </script>
 
 <div class="grid">
-	{#each cols as col}
-		<div
-			class="grid-item"
-			style="--cols: {col.span}; --row-span: {col.rowCount};"
-		>
-			{#each col.pins as pinRowItem}
-				<a
-					class="hover-shift"
-					href={`https://pinterest.com/pin/${pinRowItem.id}/`}
-					target="_blank"
-					aria-label={`Pinterest pin: ${pinRowItem.description}`}
+	{#each rows as row}
+		<div class="row">
+			{#each row as col}
+				<div
+					class="grid-item"
+					style="--cols: {col.span}; --row-span: {col.rowCount};"
 				>
-					<img loading="lazy" src={getImageFromPin(pinRowItem)} alt="" />
-				</a>
+					{#each col.pins as pinRowItem}
+						<a
+							class="hover-shift"
+							href={`https://pinterest.com/pin/${pinRowItem.id}/`}
+							target="_blank"
+							aria-label={`Pinterest pin: ${pinRowItem.description}`}
+						>
+							<img loading="lazy" src={getImageFromPin(pinRowItem)} alt="" />
+						</a>
+					{/each}
+				</div>
 			{/each}
 		</div>
 	{/each}
@@ -77,6 +86,13 @@
 		grid-template-columns: repeat(9, 1fr);
 		grid-gap: 10px;
 		margin-top: 30px;
+
+		.row {
+			display: grid;
+			grid-gap: inherit;
+			grid-column: 1 / -1;
+			grid-template-columns: subgrid;
+		}
 
 		.grid-item {
 			grid-column: span var(--cols);

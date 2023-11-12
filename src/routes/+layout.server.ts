@@ -8,7 +8,7 @@ function getPins(res: any): Pin[] {
 	return res.resource_response.data.filter((t: Pin) => t.id); // Sometimes it'll insert ad-slots without an ID
 }
 
-export const load: LayoutServerLoad = async ({ route, fetch }) => {
+export const load: LayoutServerLoad = async ({ fetch }) => {
 	const posts = await getPosts();
 
 	const res = await fetch(
