@@ -24,7 +24,7 @@
 		</div>
 		<div class="img-container">
 			<div class="img">
-				<img src="/ellie2.png" alt="A cheerie Ellie (or something)" />
+				<img src="/ellie2.webp" alt="A cheerie Ellie (or something)" />
 			</div>
 		</div>
 	</div>
