@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	export let title = "Ellie's blog";
 	export let description = "Welcome to Ellie's blog!";
 	export let image = "/favicon.png";

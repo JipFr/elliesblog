@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import BigImageCard from "../parts/BigImageCard.svelte";
 	import Heading2 from "../util/Heading2.svelte";
 	import Paragraph from "../util/Paragraph.svelte";

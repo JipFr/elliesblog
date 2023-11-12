@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import AboutEllie from "../parts/AboutEllie.svelte";
 
 	import { page } from "$app/stores";

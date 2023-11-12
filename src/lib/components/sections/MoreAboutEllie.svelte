@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Section from "../util/Section.svelte";
 	import Heading2 from "../util/Heading2.svelte";
 	import Paragraph from "../util/Paragraph.svelte";
