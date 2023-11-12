@@ -1,22 +1,9 @@
 import fs from "node:fs";
 import { Marked } from "marked";
 import fm from "front-matter";
+import type { Post, PostMeta } from "$lib/types";
 
 const marked = new Marked();
-
-interface PostMeta {
-	title: string;
-	title_short: string;
-	slug: string;
-	date: string;
-	thumbnail: string;
-}
-
-export interface Post {
-	meta: PostMeta;
-	md: string;
-	html: string;
-}
 
 export async function getPosts() {
 	const postsPath = "./content/posts/";

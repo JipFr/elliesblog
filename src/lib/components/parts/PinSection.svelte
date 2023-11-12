@@ -1,17 +1,25 @@
 <script lang="ts">
-	export let pins: any[];
+	import type { Pin } from "$lib/types";
+
+	export let pins: Pin[];
 	const pinsClone = Object.assign([], pins);
 
-	function getImageFromPin(pin: any) {
+	function getImageFromPin(pin: Pin) {
 		const { images } = pin;
-		// return images["474x"].url;
 		return images["236x"].url;
+	}
+
+	interface Col {
+		span: number;
+		pins: Pin[];
+		rowCount: number;
+		t: number;
 	}
 
 	// Generate grid layout randomly
 	const colCount = 9;
 	let colsFilled = 0;
-	let cols: any = [];
+	let cols: Col[] = [];
 
 	while (colsFilled < colCount) {
 		const possibleCols = [2, 2, 3];
