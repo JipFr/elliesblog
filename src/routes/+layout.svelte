@@ -54,8 +54,7 @@
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		font-family: "Shippori Mincho", "Segoe UI", Tahoma, Geneva, Verdana,
-			sans-serif;
+		font-family: "Shippori Mincho", serif, sans-serif;
 		overflow-x: hidden;
 
 		background-color: var(--body);

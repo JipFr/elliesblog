@@ -14,7 +14,7 @@
 
 <style lang="scss">
 	header {
-		font-weight: bold;
+		font-weight: 500;
 		padding-bottom: 19px;
 		border-bottom: 1px solid var(--border);
 		display: flex;
@@ -35,7 +35,7 @@
 	}
 	h1 {
 		margin: 0;
-		font-weight: 900;
+		font-weight: 800;
 		font-size: 42px;
 	}
 

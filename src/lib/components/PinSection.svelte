@@ -4,7 +4,8 @@
 
 	function getImageFromPin(pin: any) {
 		const { images } = pin;
-		return images["474x"].url;
+		// return images["474x"].url;
+		return images["236x"].url;
 	}
 
 	// Generate grid layout randomly
