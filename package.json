@@ -32,6 +32,7 @@
 	"dependencies": {
 		"@sveltejs/adapter-static": "^2.0.3",
 		"@tinacms/cli": "^1.5.31",
+		"front-matter": "^4.0.2",
 		"fs": "^0.0.1-security",
 		"marked": "^9.1.6",
 		"sass": "^1.69.5",

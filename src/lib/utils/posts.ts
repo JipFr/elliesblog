@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { Marked } from "marked";
+import fm from "front-matter";
 
 const marked = new Marked();
 
@@ -24,14 +25,9 @@ export async function getPosts() {
 		await Promise.all(
 			paths.map(async (path: string) => {
 				const content = fs.readFileSync(postsPath + path, "utf-8"); // Get markdown files
-				const splitContent = content.split("---");
-				const meta = Object.fromEntries(
-					splitContent[1]
-						.split("\n")
-						.filter(Boolean)
-						.map((t: string) => t.split(": "))
-				) as PostMeta;
-				const md = splitContent.slice(2).join("---").trim();
+
+				const { attributes: meta, body: md } = fm<PostMeta>(content);
+
 				const post: Post = {
 					meta,
 					md,
