@@ -6,6 +6,7 @@
 
 	export let oneRow = false;
 	export let showLink = false;
+	export let forceGrid = false;
 </script>
 
 <Section>
@@ -19,7 +20,7 @@
 		{#if showLink}<a href="/people-picks">View all people picks</a>{/if}
 	</div>
 
-	<PeoplePicksList {oneRow} />
+	<PeoplePicksList {oneRow} {forceGrid} />
 </Section>
 
 <style lang="scss">

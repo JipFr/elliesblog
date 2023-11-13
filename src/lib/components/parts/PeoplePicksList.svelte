@@ -6,9 +6,10 @@
 	$: page = $pageStore.data as PageData;
 
 	export let oneRow = false;
+	export let forceGrid = false;
 </script>
 
-<div class="grid-wrapper">
+<div class="grid-wrapper" class:force-grid={forceGrid}>
 	<div class="grid" class:one-row={oneRow}>
 		{#each page.posts as post}
 			<a href={`/${post.meta.slug}`} class="hover-shift">
@@ -52,38 +53,45 @@
 	}
 
 	@media (max-width: 1000px) {
-		.grid-wrapper {
+		.grid-wrapper.force-grid .grid {
+			grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+			:global(.big-image-card) {
+				font-size: 1.7rem;
+			}
+		}
+		.grid-wrapper:not(.force-grid) {
 			display: grid;
 			grid-template-columns: 100%;
 			width: calc(100% + 4rem);
 			margin-left: -2rem;
 			position: relative;
-		}
-		.grid {
-			display: flex;
-			overflow-x: auto;
-			overflow-y: hidden;
-			max-width: 100%;
-			scroll-snap-type: x mandatory;
-
-			> :global(*) {
-				min-width: 200px;
-				scroll-snap-align: start;
-				scroll-margin-left: 2rem;
-			}
-
-			> :global(*:first-child) {
-				margin-left: 2rem;
-			}
-
-			> :global(*:last-child) {
+			.grid {
 				display: flex;
-			}
-			> :global(*:last-child::after) {
-				content: "";
-				display: block;
-				min-width: 2rem;
-				height: 1px;
+				overflow-x: auto;
+				overflow-y: hidden;
+				max-width: 100%;
+				scroll-snap-type: x mandatory;
+
+				> :global(*) {
+					min-width: 200px;
+					scroll-snap-align: start;
+					scroll-margin-left: 2rem;
+				}
+
+				> :global(*:first-child) {
+					margin-left: 2rem;
+				}
+
+				> :global(*:last-child) {
+					display: flex;
+				}
+				> :global(*:last-child::after) {
+					content: "";
+					display: block;
+					min-width: 2rem;
+					height: 1px;
+				}
 			}
 		}
 	}

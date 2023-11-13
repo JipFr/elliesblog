@@ -9,5 +9,5 @@
 </svelte:head>
 
 <Cols>
-	<PeoplePicks />
+	<PeoplePicks forceGrid />
 </Cols>
