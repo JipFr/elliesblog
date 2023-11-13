@@ -61,3 +61,11 @@ export interface Post {
 	md: string;
 	html: string;
 }
+
+export interface MetaProps {
+	title?: string;
+	description?: string;
+	image?: string;
+	subheading?: string;
+	hideAbout?: boolean;
+}

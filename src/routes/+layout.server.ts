@@ -1,6 +1,6 @@
 import type { LayoutServerLoad } from "./$types";
 import { getPosts } from "$lib/utils/posts";
-import type { Pin } from "$lib/types";
+import type { MetaProps, Pin } from "$lib/types";
 
 export const prerender = true;
 
@@ -26,5 +26,13 @@ export const load: LayoutServerLoad = async ({ fetch }) => {
 	// Remove favourites from pins
 	pins = pins.filter((pin) => !favouritesPins.find((f) => f.id === pin.id));
 
-	return { pins, favouritesPins, posts };
+	// Meta
+	const meta: MetaProps = {};
+
+	return {
+		pins,
+		favouritesPins,
+		posts,
+		meta,
+	};
 };

@@ -4,7 +4,8 @@
 	import Meta from "$lib/components/util/Meta.svelte";
 
 	import { page } from "$app/stores";
-	$: meta = $page.data?.meta;
+	import type { PageData } from "./$types";
+	$: meta = ($page.data as PageData)?.meta;
 </script>
 
 <svelte:head>

@@ -6,9 +6,9 @@
 
 	import PinterestLink from "../util/PinterestLink.svelte";
 
+	import type { PageData } from "../../../routes/$types";
 	import { page as pageStore } from "$app/stores";
-
-	$: data = $pageStore.data;
+	$: data = $pageStore.data as PageData;
 </script>
 
 <Section>

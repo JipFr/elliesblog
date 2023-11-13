@@ -1,7 +1,9 @@
-<script>
-	import { page as pageStore } from "$app/stores";
+<script lang="ts">
 	import BigImageCard from "./BigImageCard.svelte";
-	$: page = $pageStore.data;
+
+	import type { PageData } from "../../../routes/$types";
+	import { page as pageStore } from "$app/stores";
+	$: page = $pageStore.data as PageData;
 
 	export let oneRow = false;
 </script>

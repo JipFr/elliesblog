@@ -1,12 +1,13 @@
 <script lang="ts">
 	import AboutEllie from "../parts/AboutEllie.svelte";
 
+	import type { PageData } from "../../../routes/$types";
 	import { page } from "$app/stores";
-	$: post = $page.data?.post;
-	$: meta = $page.data?.meta;
+	$: data = $page.data as PageData;
+	$: meta = data?.meta;
 </script>
 
-<header data-has-post={!!post}>
+<header data-hide-about={!!meta.hideAbout}>
 	<div>
 		<h3>{meta?.subheading || ""}</h3>
 		<a href="/"><h1>Ellie's blog</h1></a>
@@ -26,7 +27,7 @@
 		align-items: flex-end;
 		min-height: 150px;
 	}
-	header[data-has-post="true"] .about {
+	header[data-hide-about="true"] .about {
 		opacity: 0;
 	}
 	a {
