@@ -77,6 +77,9 @@
 			margin-right: 0;
 			margin-bottom: 20px;
 		}
+	}
+
+	@media (max-width: 1250px) {
 		.post-right {
 			display: none;
 		}
