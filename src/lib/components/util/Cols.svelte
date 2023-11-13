@@ -9,7 +9,7 @@
 		grid-gap: 0;
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1250px) {
 		.cols {
 			grid-template-columns: 100%;
 		}

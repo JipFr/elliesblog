@@ -8,4 +8,10 @@
 		margin: 0 auto;
 		padding: 0 2rem;
 	}
+
+	@media (max-width: 1250px) {
+		.container {
+			max-width: calc(820px + 4rem);
+		}
+	}
 </style>
