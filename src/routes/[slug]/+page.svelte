@@ -79,7 +79,7 @@
 		}
 	}
 
-	@media (max-width: 1250px) {
+	@media (max-width: 1280px) {
 		.post-right {
 			display: none;
 		}

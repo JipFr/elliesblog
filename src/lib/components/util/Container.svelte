@@ -9,7 +9,7 @@
 		padding: 0 2rem;
 	}
 
-	@media (max-width: 1250px) {
+	@media (max-width: 1280px) {
 		.container {
 			max-width: calc(820px + 4rem);
 		}
