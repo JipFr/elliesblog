@@ -10,8 +10,6 @@ thumbnail: /people/tom.webp
 
 Spirits are placed on earth by whatever God watches over the Earth. Tzipora dislikes the God of the world, but she respects the spirits, and as a child she can see them in their natural state. In Vekllei and Scandinavia, they are called Faeries. In Japan, they are spirits. In the United States, there is no word for them, because they are considered to not exist.
 
-![](</Screenshot 2024-01-04 at 01.28.58.png>)
-
 Tzipora asked the spirit to watch over her and her father when they are in the desert. From that day on, she left an offering outside in a makeshift shrine in the backyard of their detached midcentury home.
 
 Tzipora has no time for God; she is a zealous humanist at her core. The spirits are fair and good. Because of them, Vekllei is environmentally conscious in a way few other great powers are in 2063.
