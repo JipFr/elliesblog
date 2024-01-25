@@ -51,7 +51,7 @@
 		--highlight: #f7d26f;
 		--highlight-alt: #ffe397;
 	}
-
+/*
 	@media (prefers-color-scheme: dark) {
 		:global(:root) {
 			--body: #01030d;
@@ -63,7 +63,7 @@
 				#2626a2;
 			--highlight-alt: #1d1d81;
 		}
-	}
+	}*/
 
 	:global(body) {
 		margin: 0;
